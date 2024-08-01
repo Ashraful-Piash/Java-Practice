@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Hello {
     public static void main(String[] vars) {
-        
+
         int age = 30;
         int myAge = 29;
         int herAge = myAge;
