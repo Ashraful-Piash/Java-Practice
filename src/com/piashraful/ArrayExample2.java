@@ -11,5 +11,12 @@ public class ArrayExample2 {
         for(String s :items){
             System.out.println(s);
         }
+
+        Integer [] numbers = {1,2,3,4,5,5};
+        List<Integer> num = Arrays.asList(numbers);
+
+        for(Integer i : num){
+            System.out.println(i);
+        }
     }
 }
