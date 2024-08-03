@@ -1,9 +1,13 @@
 package com.piashraful;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class MortgageCalculator {
     public static void main(String[] args) {
+
+        byte MONTHS_IN_YEAR = 12;
+        byte PERCHANT = 100;
         System.out.print("Enter your loan amount: " + "$");
         Scanner scanner = new Scanner(System.in);
         int loanAmount = scanner.nextInt();
@@ -13,7 +17,7 @@ public class MortgageCalculator {
         int timePeriodInMonth = timePeriodInYear * 12;
 
         final float annualInterestRate = 11.5f;
-        final float monthlyInterestRate = annualInterestRate / 12 / 100;
+        final float monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR / PERCHANT;
         System.out.println("The monthly interest rate is: " + monthlyInterestRate);
         System.out.println("Do you want to take the loan: (yes/no) : ");
         String loanDecision = scanner.next().trim().toLowerCase();
@@ -22,8 +26,9 @@ public class MortgageCalculator {
         if (isLoanTakable) {
             double mortgage = loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, timePeriodInMonth) /
                     (Math.pow(1 + monthlyInterestRate, timePeriodInMonth) - 1);
+            String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
 
-            System.out.printf("Your monthly mortgage payment is: $%.2f%n ", mortgage);
+            System.out.println("Your monthly mortgage payment is: " + formattedMortgage);
 
         } else {
             System.out.println("Loan declined");
