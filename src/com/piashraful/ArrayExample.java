@@ -1,5 +1,7 @@
 package com.piashraful;
 
+import java.util.Arrays;
+
 public class ArrayExample {
     public static void main(String[] args) {
         String[] cars = {"Audi", "Beng", "Mustang"};
@@ -14,6 +16,7 @@ public class ArrayExample {
 
         int [] marks = new int[5];
         marks[0] = 1;
+        System.out.println(Arrays.toString(cars));
 
     }
 }
