@@ -8,7 +8,6 @@ public class FunctionExample {
         String name = printName();
         System.out.println("Name is " + name);
 
-
     }
 
     public static String printName() {
