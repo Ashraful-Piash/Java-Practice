@@ -1,0 +1,22 @@
+package com.piashraful;
+
+public class SpacesIndex {
+    public static void main(String[] args) {
+
+
+
+
+        String s = "LeetcodeHelpsALot";
+        String[] split = s.split("");
+        for(int i = 0;i<split.length;i++){
+            if(i == 8 || i == 13 || i == 14){
+                System.out.print(" ");
+            }
+            System.out.print(split[i]);
+        }
+
+
+
+    }
+
+}
